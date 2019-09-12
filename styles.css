@@ -1,0 +1,169 @@
+/*
+ * Global styles
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+}
+* {
+  box-sizing: border-box;
+}
+input,
+button {
+  appearance: none;
+  border: 0;
+  background: 0;
+  padding: 0.5rem;
+  font: inherit;
+  outline: none;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+/* Main app styles*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  color: #1b1a21;
+}
+
+nav {
+  height: 80px;
+  background-color: #1b1a21;
+  opacity: 0.88;
+  margin-bottom: 80px;
+}
+
+.nav_logo {
+  height: 21.5px;
+  margin: 29.25px 24px;
+}
+
+.demo_form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  color: #777582;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+#business_email,
+#business_size {
+  height: 32px;
+  background-color: #f3f3f5;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777582;
+}
+
+.image_circle {
+  height: 120px;
+  width: 120px;
+  background-color: #f9edff;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.image_circle i {
+  background: linear-gradient(180deg, #aa00ff 0%, #00a3d7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 64px;
+  font-size: 56px;
+  width: 49px;
+  padding-top: 0.4em;
+}
+
+.label_title {
+  margin-bottom: 6px;
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.input_box {
+  margin-bottom: 24px;
+}
+
+.solutions {
+  display: flex;
+}
+
+.solution_options {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.solution_options label {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+button[type="submit"] {
+  background-color: #8800cc;
+  border-radius: 4px;
+  color: white;
+  width: 228px;
+  height: 40px;
+  margin: 40px auto;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+button[type="submit"]:hover {
+  background-color: #aa00ff;
+}
+
+#business_email:focus {
+  border: 1px solid #c550ff;
+}
+
+select:hover {
+  background-color: #f3f3f5;
+}
+
+#business_email:valid {
+  border: 1px solid #00873f;
+}
+
+#business_email:invalid {
+  border: 1px solid #c41337;
+}
+
+.hidden {
+  display: none;
+}
