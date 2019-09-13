@@ -27,22 +27,26 @@
         <label for="business_email" class="label_title">Business Email</label>
         <input
           id="business_email"
-          type="email"
           name="business_email"
+          class="business_email"
           placeholder="Enter your business email"
-          class="input_box"
           required
         />
-        <label for="business_size" class="label_title">Business Size</label>
-        <select id="business_size" class="input_box" required>
-          <option value="" disabled selected>Select Size</option>
-          <option value="1-10">1-10</option>
-          <option value="11-15">11-15</option>
-          <option value="51-100">51-100</option>
-          <option value="101-250">101-250</option>
-          <option value="250-1000">250-1000</option>
-          <option value="1000+">1000+</option>
-        </select>
+        <p class="email_error hidden">
+          Please make sure this isn't a personal email address
+        </p>
+        <fieldset>
+          <legend class="label_title">Business Size</legend>
+          <select id="business_size" class="business_size" required>
+            <option value="" disabled selected>Select Size</option>
+            <option value="1-10">1-10</option>
+            <option value="11-15">11-15</option>
+            <option value="51-100">51-100</option>
+            <option value="101-250">101-250</option>
+            <option value="250-1000">250-1000</option>
+            <option value="1000+">1000+</option>
+          </select>
+        </fieldset>
         <label for="solution" class="label_title"
           >What is the most important thing to you in a solution?</label
         >
@@ -53,6 +57,7 @@
                 type="radio"
                 id="solution1"
                 name="solution"
+                class="solution"
                 value="analytics"
               />
               Real-time Analytics</label
@@ -63,6 +68,7 @@
                 type="radio"
                 id="solution2"
                 name="solution"
+                class="solution"
                 value="response_time"
               />
               Query Response Time</label
@@ -73,6 +79,7 @@
                 type="radio"
                 id="solution3"
                 name="solution"
+                class="solution"
                 value="concurrency"
               />
               High Concurrency</label
@@ -83,6 +90,7 @@
                 type="radio"
                 id="solution4"
                 name="solution"
+                class="solution"
                 value="data_ingest"
               />
               Fast Data Ingest</label
@@ -94,6 +102,7 @@
                 type="radio"
                 id="solution5"
                 name="solution"
+                class="solution"
                 value="scalability"
               />
               Scalability</label
@@ -104,6 +113,7 @@
                 type="radio"
                 id="solution6"
                 name="solution"
+                class="solution"
                 value="document_storage"
               />
               Document Storage</label
@@ -114,6 +124,7 @@
                 type="radio"
                 id="solution7"
                 name="solution"
+                class="solution"
                 value="text_search"
               />
               Full Text Search</label
@@ -123,6 +134,7 @@
                 type="radio"
                 id="solution8"
                 name="solution"
+                class="solution"
                 value="price"
               />
               Price</label
@@ -130,7 +142,7 @@
           </div>
         </div>
         <button type="submit">
-          Continue to Schedule a Time
+          Continue to Schedule a Time &nbsp
           <i class="fas fa-arrow-right"></i>
         </button>
       </form>

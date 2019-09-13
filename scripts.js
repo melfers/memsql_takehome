@@ -6,10 +6,20 @@ const calendarIcon = document.querySelector(".far");
 
 form.addEventListener("submit", handleSubmit);
 
-function formValidator() {}
+function formValidator(email) {
+  let userEmail = document.getElementById("business_email");
+  const emailRGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailResult = emailRGEX.test(email);
+  if (emailResult == false) {
+    document.querySelector(".email_error").classList.remove("hidden");
+    userEmail.classList.add("invalid");
+  } else {
+    userEmail.classList.add("valid");
+    renderOutcome();
+  }
+}
 
-function handleSubmit(event) {
-  event.preventDefault();
+function renderOutcome() {
   if (
     businessSize == "1-10" ||
     form.solution.value == "document_storage" ||
@@ -30,4 +40,10 @@ function handleSubmit(event) {
     calendarIcon.classList.remove("fa-calendar-alt");
     calendarIcon.classList.add("fa-calendar-check");
   }
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let userEmail = document.getElementById("business_email").value;
+  formValidator(userEmail);
 }

@@ -52,7 +52,7 @@ nav {
 .demo_form {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 400px;
   margin: auto;
 }
 
@@ -76,8 +76,8 @@ p {
   font-size: 16px;
 }
 
-#business_email,
-#business_size {
+.business_email,
+.business_size {
   height: 32px;
   background-color: #f3f3f5;
   border-radius: 4px;
@@ -85,6 +85,7 @@ p {
   font-size: 14px;
   line-height: 20px;
   color: #777582;
+  width: 100%;
 }
 
 .image_circle {
@@ -114,10 +115,6 @@ p {
   font-weight: bold;
 }
 
-.input_box {
-  margin-bottom: 24px;
-}
-
 .solutions {
   display: flex;
 }
@@ -131,6 +128,7 @@ p {
 .solution_options label {
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 8px;
 }
 
 button[type="submit"] {
@@ -150,6 +148,8 @@ button[type="submit"]:hover {
 
 #business_email:focus {
   border: 1px solid #c550ff;
+  background-color: #ffffff;
+  color: #1b1a21;
 }
 
 select:hover {
@@ -162,4 +162,27 @@ button i {
 
 .hidden {
   display: none;
+}
+
+.email_error {
+  color: #c41337;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 6px;
+  margin-bottom: 0px;
+}
+
+fieldset {
+  border: none;
+  margin: 24px 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.invalid {
+  border: 1px solid #c41337;
+}
+
+.valid {
+  border: 1px solid #00873f;
 }
