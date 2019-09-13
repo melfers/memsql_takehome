@@ -156,12 +156,8 @@ select:hover {
   background-color: #f3f3f5;
 }
 
-#business_email:valid {
-  border: 1px solid #00873f;
-}
-
-#business_email:invalid {
-  border: 1px solid #c41337;
+button i {
+  font-size: 14px;
 }
 
 .hidden {
