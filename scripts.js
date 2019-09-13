@@ -13,15 +13,21 @@ function formValidator(email) {
   if (emailResult == false) {
     document.querySelector(".email_error").classList.remove("hidden");
     userEmail.classList.add("invalid");
+    document
+      .querySelector(".fa-exclamation-triangle")
+      .classList.remove("hidden");
   } else {
     userEmail.classList.add("valid");
-    renderOutcome();
+    document.querySelector(".fa-check-circle").classList.remove("hidden");
+    setTimeout(() => {
+      renderOutcome();
+    }, 500);
   }
 }
 
 function renderOutcome() {
   if (
-    businessSize == "1-10" ||
+    businessSize.value == "1-10" ||
     form.solution.value == "document_storage" ||
     form.solution.value == "text_search" ||
     form.solution.value == "price"
@@ -31,14 +37,18 @@ function renderOutcome() {
       "We'll let you know when the next one is available";
     form.classList.add("hidden");
     calendarIcon.classList.remove("fa-calendar-alt");
-    calendarIcon.classList.add("fa-calendar-times");
+    setTimeout(() => {
+      calendarIcon.classList.add("fa-calendar-times");
+    }, 0);
   } else {
     headerValue.innerHTML = "Awesome! We'll contact you shortly";
     subHeaderValue.innerHTML =
       "We'll send you an email with available times to meet";
     form.classList.add("hidden");
     calendarIcon.classList.remove("fa-calendar-alt");
-    calendarIcon.classList.add("fa-calendar-check");
+    setTimeout(() => {
+      calendarIcon.classList.add("fa-calendar-check");
+    }, 0);
   }
 }
 

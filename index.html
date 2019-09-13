@@ -25,13 +25,17 @@
       </p>
       <form id="form">
         <label for="business_email" class="label_title">Business Email</label>
-        <input
-          id="business_email"
-          name="business_email"
-          class="business_email"
-          placeholder="Enter your business email"
-          required
-        />
+        <div class="wrapper">
+          <input
+            id="business_email"
+            name="business_email"
+            class="business_email"
+            placeholder="Enter your business email"
+            required
+          />
+          <i class="fas fa-exclamation-triangle hidden"></i>
+          <i class="fas fa-check-circle hidden"></i>
+        </div>
         <p class="email_error hidden">
           Please make sure this isn't a personal email address
         </p>

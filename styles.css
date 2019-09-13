@@ -164,6 +164,10 @@ button i {
   display: none;
 }
 
+.fas.hidden {
+  display: none;
+}
+
 .email_error {
   color: #c41337;
   font-size: 12px;
@@ -185,4 +189,24 @@ fieldset {
 
 .valid {
   border: 1px solid #00873f;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.fa-exclamation-triangle {
+  position: absolute;
+  color: #c41337;
+  top: 6px;
+  right: 8px;
+  width: 20px;
+}
+
+.fa-check-circle {
+  position: absolute;
+  color: #00873f;
+  top: 6px;
+  right: 8px;
+  width: 20px;
 }
